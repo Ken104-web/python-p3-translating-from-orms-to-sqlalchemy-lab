@@ -11,3 +11,16 @@ class Dog(Base):
     id = Column(Integer(), primary_key=True)
     name = Column(String())
     breed = Column(String())
+
+# created base object
+# from sqlalchemy.ext.declarative import declarative_base
+
+#  seed.py
+# initializes sessions maker for creating instances
+#  needs creater_engine 
+# session_maker
+# session itself
+
+
+
+

@@ -1,15 +1,22 @@
 from models import Dog
 
-def create_table(base):
-    pass
+def create_table(base, engine):
+    base.metadata.create_all(engine)
+
+    
 
 def save(session, dog):
+    session.add(dog)
+    session.commit()
     pass
 
-def get_all(session):
-    pass
+def get_all(session, Dog):
+    return session.query(Dog).all()
+    
+    
 
 def find_by_name(session, name):
+    
     pass
 
 def find_by_id(session, id):
